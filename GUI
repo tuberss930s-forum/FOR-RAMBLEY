@@ -1,0 +1,282 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local MLSV = Instance.new("ScreenGui")
+local MAIN_GUI = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local USER_NAME_DISPLAY = Instance.new("TextLabel")
+local USER_NAME = Instance.new("TextLabel")
+local USER_ID = Instance.new("TextLabel")
+local GAME_ID = Instance.new("TextLabel")
+local IMAGE_USER = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local FLY_TOGLER = Instance.new("TextButton")
+
+--Properties:
+
+MLSV.Name = "MLSV"
+MLSV.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+MLSV.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MAIN_GUI.Name = "MAIN_GUI"
+MAIN_GUI.Parent = MLSV
+MAIN_GUI.Active = true
+MAIN_GUI.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MAIN_GUI.BackgroundTransparency = 0.500
+MAIN_GUI.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MAIN_GUI.BorderSizePixel = 0
+MAIN_GUI.Position = UDim2.new(0.195931479, 0, 0.189749181, 0)
+MAIN_GUI.Size = UDim2.new(0, 1136, 0, 569)
+
+UICorner.Parent = MAIN_GUI
+
+USER_NAME_DISPLAY.Name = "USER_NAME_DISPLAY"
+USER_NAME_DISPLAY.Parent = MAIN_GUI
+USER_NAME_DISPLAY.Active = true
+USER_NAME_DISPLAY.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+USER_NAME_DISPLAY.BackgroundTransparency = 1.000
+USER_NAME_DISPLAY.BorderColor3 = Color3.fromRGB(0, 0, 0)
+USER_NAME_DISPLAY.BorderSizePixel = 0
+USER_NAME_DISPLAY.Position = UDim2.new(0.19542253, 0, 0, 0)
+USER_NAME_DISPLAY.Size = UDim2.new(0, 200, 0, 50)
+USER_NAME_DISPLAY.Font = Enum.Font.SourceSansBold
+USER_NAME_DISPLAY.Text = "Hello , "
+USER_NAME_DISPLAY.TextColor3 = Color3.fromRGB(255, 255, 255)
+USER_NAME_DISPLAY.TextScaled = true
+USER_NAME_DISPLAY.TextSize = 14.000
+USER_NAME_DISPLAY.TextWrapped = true
+
+USER_NAME.Name = "USER_NAME"
+USER_NAME.Parent = MAIN_GUI
+USER_NAME.Active = true
+USER_NAME.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+USER_NAME.BackgroundTransparency = 1.000
+USER_NAME.BorderColor3 = Color3.fromRGB(0, 0, 0)
+USER_NAME.BorderSizePixel = 0
+USER_NAME.Position = UDim2.new(0.182218313, 0, 0.0878734589, 0)
+USER_NAME.Size = UDim2.new(0, 230, 0, 16)
+USER_NAME.Font = Enum.Font.SourceSansBold
+USER_NAME.Text = "@"
+USER_NAME.TextColor3 = Color3.fromRGB(255, 255, 255)
+USER_NAME.TextScaled = true
+USER_NAME.TextSize = 14.000
+USER_NAME.TextWrapped = true
+
+USER_ID.Name = "USER_ID"
+USER_ID.Parent = MAIN_GUI
+USER_ID.Active = true
+USER_ID.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+USER_ID.BackgroundTransparency = 1.000
+USER_ID.BorderColor3 = Color3.fromRGB(0, 0, 0)
+USER_ID.BorderSizePixel = 0
+USER_ID.Position = UDim2.new(0.433098584, 0, 0.0140597541, 0)
+USER_ID.Size = UDim2.new(0, 634, 0, 42)
+USER_ID.Font = Enum.Font.SourceSansBold
+USER_ID.Text = "ID"
+USER_ID.TextColor3 = Color3.fromRGB(255, 255, 255)
+USER_ID.TextScaled = true
+USER_ID.TextSize = 14.000
+USER_ID.TextWrapped = true
+
+GAME_ID.Name = "GAME_ID"
+GAME_ID.Parent = MAIN_GUI
+GAME_ID.Active = true
+GAME_ID.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GAME_ID.BackgroundTransparency = 1.000
+GAME_ID.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GAME_ID.BorderSizePixel = 0
+GAME_ID.Position = UDim2.new(0, 0, 0.205623895, 0)
+GAME_ID.Size = UDim2.new(0, 634, 0, 42)
+GAME_ID.Font = Enum.Font.SourceSansBold
+GAME_ID.Text = "GAME_ID"
+GAME_ID.TextColor3 = Color3.fromRGB(255, 255, 255)
+GAME_ID.TextScaled = true
+GAME_ID.TextSize = 14.000
+GAME_ID.TextWrapped = true
+
+IMAGE_USER.Name = "IMAGE_USER"
+IMAGE_USER.Parent = MAIN_GUI
+IMAGE_USER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+IMAGE_USER.BackgroundTransparency = 1.000
+IMAGE_USER.BorderColor3 = Color3.fromRGB(27, 42, 53)
+IMAGE_USER.BorderSizePixel = 0
+IMAGE_USER.Position = UDim2.new(0.00578923291, 0, 0.0136816362, 0)
+IMAGE_USER.Size = UDim2.new(0.169012532, 0, 0.262241036, 0)
+IMAGE_USER.ZIndex = 2
+IMAGE_USER.Image = "http://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&userId=1"
+
+TextLabel.Parent = MAIN_GUI
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.850352108, 0, 0.943760991, 0)
+TextLabel.Size = UDim2.new(0, 170, 0, 32)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Сделано в тг = @MODSLOADSCRIPTVZLOM"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+FLY_TOGLER.Name = "FLY_TOGLER"
+FLY_TOGLER.Parent = MAIN_GUI
+FLY_TOGLER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FLY_TOGLER.BackgroundTransparency = 1.000
+FLY_TOGLER.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FLY_TOGLER.BorderSizePixel = 0
+FLY_TOGLER.Position = UDim2.new(0.0853873268, 0, 0.630931437, 0)
+FLY_TOGLER.Size = UDim2.new(0, 200, 0, 50)
+FLY_TOGLER.Font = Enum.Font.SourceSansBold
+FLY_TOGLER.Text = "FLY R6"
+FLY_TOGLER.TextColor3 = Color3.fromRGB(255, 255, 255)
+FLY_TOGLER.TextScaled = true
+FLY_TOGLER.TextSize = 14.000
+FLY_TOGLER.TextWrapped = true
+
+-- Scripts:
+
+local function SECG_fake_script() -- USER_NAME_DISPLAY.LocalScript 
+	local script = Instance.new('LocalScript', USER_NAME_DISPLAY)
+
+	local user = game:GetService("Players").LocalPlayer.DisplayName
+	
+	script.Parent.Text = "Привет , " .. user
+end
+coroutine.wrap(SECG_fake_script)()
+local function XSYM_fake_script() -- USER_NAME.LocalScript 
+	local script = Instance.new('LocalScript', USER_NAME)
+
+	local user = game:GetService("Players").LocalPlayer.Name
+	
+	script.Parent.Text = "@ " .. user
+end
+coroutine.wrap(XSYM_fake_script)()
+local function JZUPVM_fake_script() -- USER_ID.LocalScript 
+	local script = Instance.new('LocalScript', USER_ID)
+
+	local user = game:GetService("Players").LocalPlayer.UserId
+	
+	script.Parent.Text = "id : " .. user
+end
+coroutine.wrap(JZUPVM_fake_script)()
+local function ZNCEE_fake_script() -- GAME_ID.LocalScript 
+	local script = Instance.new('LocalScript', GAME_ID)
+
+	local game = game.PlaceId
+	
+	script.Parent.Text = "id_game : " .. game
+end
+coroutine.wrap(ZNCEE_fake_script)()
+local function FTJF_fake_script() -- IMAGE_USER.LocalScript 
+	local script = Instance.new('LocalScript', IMAGE_USER)
+
+	script.Parent.Image = "http://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&userId=" .. game.Players.LocalPlayer.UserId
+end
+coroutine.wrap(FTJF_fake_script)()
+local function FPDD_fake_script() -- FLY_TOGLER.LocalScript 
+	local script = Instance.new('LocalScript', FLY_TOGLER)
+
+	local power = 10 
+	wait(3) 
+	bin = script.Parent 
+	bpos = Instance.new("BodyPosition") 
+	gyro = Instance.new("BodyGyro") 
+	gyro.maxTorque = Vector3.new(math.huge,math.huge,math.huge) 
+	bpos.maxForce = Vector3.new(math.huge,math.huge,math.huge) 
+	fly = false 
+	player = game:GetService("Players").LocalPlayer
+	char = player.Character.Torso 
+	airborne = false 
+	local mouse = player:GetMouse()
+	local on = false
+	
+	function onButton1Down()
+	fly = true 
+	while fly do 
+	pos = mouse.Hit.p 
+	--gyro.cframe = CFrame.new(char.Position,pos) 
+	bpos.position = char.Position + (pos-char.Position).unit * power 
+	wait() 
+	end 
+	end 
+	
+	function onMove() 
+	pos = mouse.Hit.p 
+	gyro.cframe = CFrame.new(char.Position,pos) * CFrame.fromEulerAnglesXYZ(-3.14/2+1.2,0,0) 
+	--bpos.position = char.Position + 
+	--wait() 
+	--end 
+	end 
+	
+	function onButton1Up() 
+	fly = false 
+	end 
+	
+	function activate() 
+	print("select") 
+	if mouse == nil then 
+	return 
+	end 
+	airborne = true 
+	bpos.Parent = char 
+	bpos.position = char.Position + Vector3.new(0,10,0) 
+	gyro.Parent = char 
+	char.Parent.Humanoid.Sit = true 
+	mouse.Button1Down:connect(function() onButton1Down() end) 
+	mouse.Button1Up:connect(function() onButton1Up() end) 
+	mouse.Move:connect(function() onMove() end) 
+	
+	for i, v in ipairs(char:GetChildren()) do 
+	if v.className == "Motor" then 
+	v.MaxVelocity = 0 
+	v.CurrentAngle = -1 
+	if v.Name == "Left Hip" then 
+	v.CurrentAngle = 1 
+	end 
+	end 
+	end 
+	end 
+	
+	function stop() 
+	print("deselect") 
+	gyro.Parent = nil 
+	fly = false 
+	airborne = false 
+	for i, v in ipairs(char:GetChildren()) do 
+	if v.className == "Motor" then 
+	v.MaxVelocity = 1 
+	end 
+	end 
+	char.Parent.Humanoid.Sit = false 
+	for i = 1, 30 do 
+	if not airborne then 
+	bpos.position = bpos.position - Vector3.new(0,0.3,0) 
+	wait(0.1) 
+	end 
+	end 
+	if not airborne then 
+	bpos.Parent = nil 
+	end 
+	end 
+	
+	script.Parent.MouseButton1Down:connect(function()
+	if on then
+	on = false
+	stop() 
+	else
+	on = true
+	activate()
+	end
+	end)
+	
+end
+coroutine.wrap(FPDD_fake_script)()
+local function XZCKSRJ_fake_script() -- MAIN_GUI.LocalScript 
+	local script = Instance.new('LocalScript', MAIN_GUI)
+
+	script.Parent.Draggable = true
+end
+coroutine.wrap(XZCKSRJ_fake_script)()
